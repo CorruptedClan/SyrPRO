@@ -24,7 +24,7 @@ local AutoTab = Window:MakeTab({
  
  --button Town
 
- Tab:AddToggle({
+ AutoTab:AddToggle({
 	Name = "This is a toggle!",
 	Default = false,
 	Callback = function(Value)
