@@ -30,7 +30,7 @@ local AutoTab = Window:MakeTab({
 	Callback = function(Value)
 		_G.AutoFarm = true
 _G.Area = 'Town'
-loadstring(game.HttpGet(game, 'https://raw.githubusercontent.com/zuhnosu/psx-auto-farm/main/main.lua', true))()
+loadstring(game.HttpGet(game,"https://raw.githubusercontent.com/zuhnosu/psx-auto-farm/main/main.lua", true))()
 	end    
 })
 
