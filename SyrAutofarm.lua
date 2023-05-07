@@ -25,10 +25,12 @@ local AutoTab = Window:MakeTab({
  --button Town
 
  AutoTab:AddToggle({
-	Name = "This is a toggle!",
+	Name = "Town",
 	Default = false,
 	Callback = function(Value)
-		print(Value)
+		_G.AutoFarm = true
+_G.Area = 'Town'
+loadstring(game.HttpGet(game, 'https://raw.githubusercontent.com/zuhnosu/psx-auto-farm/main/main.lua', true))()
 	end    
 })
 
