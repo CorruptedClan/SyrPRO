@@ -17,7 +17,9 @@ local AutoTab = Window:MakeTab({
  -- section
  local FirstSection = AutoTab:AddSection({ 
 
-         Name = "Thank you for using, updates soon!" 
+         Name = "Spawn Area" 
 
  })
+ 
+ --button 1
  
