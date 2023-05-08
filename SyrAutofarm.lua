@@ -1,6 +1,6 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
---start
+-- start
 
 local SyrWindow = Rayfield:CreateWindow({
    Name = "AutoFarm",
@@ -11,12 +11,12 @@ local SyrWindow = Rayfield:CreateWindow({
       FolderName = nil, -- Create a custom folder for your hub/game
       FileName = "SyrPRO"
 
---start 2
+-- start 2
 
 local AutoTab = SyrWindow:CreateTab("Auto Farm", 4483362458) 
 local AutoSection = AutoTab:CreateSection("Spawn")
 
---spawn town
+-- spawn town
 
 _G.AutoFarm = false
 _G.Area = "Town"
@@ -30,4 +30,4 @@ local Toggle = Tab:CreateToggle({
    end
 })
 
---spawn forest
+-- spawn forest
