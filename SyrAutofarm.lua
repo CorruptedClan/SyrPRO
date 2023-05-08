@@ -1,44 +1,33 @@
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 --start
-local Window = OrionLib:MakeWindow({Name = "SyrHubProPsx", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
---stage 1 (tab 1)
+local SyrWindow = Rayfield:CreateWindow({
+   Name = "AutoFarm",
+   LoadingTitle = "Ty for using",
+   LoadingSubtitle = "updates soon",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "SyrPRO"
 
-local AutoTab = Window:MakeTab({ 
+--start 2
 
-         Name = "Auto Farm", 
+local AutoTab = SyrWindow:CreateTab("Auto Farm", 4483362458) 
+local AutoSection = AutoTab:CreateSection("Spawn")
 
-         Icon = "rbxassetid://4483345998", 
+--spawn town
 
-         PremiumOnly = false 
-
- })
- 
- -- section
- local FirstSection = AutoTab:AddSection({ 
-
-         Name = "Spawn Area" 
-
- })
- 
- --button Town
-
- AutoTab:AddToggle({
-	Name = "Town",
-	Default = _G.AutoFarm = false
-  _G.Area = "Town"
+_G.AutoFarm = false
+_G.Area = "Town"
 loadstring(game.HttpGet(game,"https://raw.githubusercontent.com/zuhnosu/psx-auto-farm/main/main.lua", true))()
-	end ,
-	Callback = function(Value)
-		_G.AutoFarm = true
-  _G.Area = "Town"
-loadstring(game.HttpGet(game,"https://raw.githubusercontent.com/zuhnosu/psx-auto-farm/main/main.lua", true))()
-	end    
+local Toggle = Tab:CreateToggle({
+   Name = "Town",
+   CurrentValue = false,
+   Flag = "Toggle1", 
+   Callback = function(Value)
+       _G.AutoFarm = Value
+   end
 })
 
-
-
---finish
-
-OrionLib:Init()
+--spawn forest
