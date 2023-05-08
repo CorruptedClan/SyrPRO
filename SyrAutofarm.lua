@@ -31,10 +31,38 @@ local AutoTab = Window:CreateTab("Autofarm", 4483362458)
 
 local Section = AutoTab:CreateSection("Spawn")
 
--- button s1
+-- button town
 
 _G.AutoFarm = false
 _G.Area = "Town"
+loadstring(game.HttpGet(game,"https://raw.githubusercontent.com/CorruptedClan/Autofarm/main/sourcecode.lua", true))()
+local Toggle = AutoTab:CreateToggle({
+   Name = "Town",
+   CurrentValue = false,
+   Flag = "Toggle1", 
+   Callback = function(Value)
+       _G.AutoFarm = Value
+   end
+})
+
+--button forest
+
+_G.AutoFarm = false
+_G.Area = "Forest"
+loadstring(game.HttpGet(game,"https://raw.githubusercontent.com/CorruptedClan/Autofarm/main/sourcecode.lua", true))()
+local Toggle = AutoTab:CreateToggle({
+   Name = "Town",
+   CurrentValue = false,
+   Flag = "Toggle1", 
+   Callback = function(Value)
+       _G.AutoFarm = Value
+   end
+})
+
+--button mine
+
+_G.AutoFarm = false
+_G.Area = "Mine"
 loadstring(game.HttpGet(game,"https://raw.githubusercontent.com/CorruptedClan/Autofarm/main/sourcecode.lua", true))()
 local Toggle = AutoTab:CreateToggle({
    Name = "Town",
