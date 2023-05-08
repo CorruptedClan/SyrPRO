@@ -29,7 +29,7 @@ local AutoTab = Window:CreateTab("Autofarm", 4483362458)
 
 -- section 1
 
-local SpawnSection = Tab:CreateSection("Spawm")
+local SpawnSection = AutoTab:CreateSection("Spawm")
 
 -- button s1
 
