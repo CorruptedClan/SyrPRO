@@ -33,7 +33,7 @@ _G.AutoFarm = false
 _G.Area = "Town"
 loadstring(game.HttpGet(game,"https://raw.githubusercontent.com/zuhnosu/psx-auto-farm/main/main.lua", true))()
 local Toggle = AutoTab:CreateToggle({
-   Name = "Toggle Example",
+   Name = "Town",
    CurrentValue = false,
    Flag = "Toggle1", 
    Callback = function(Value)
