@@ -51,7 +51,7 @@ _G.AutoFarm = false
 _G.Area = "Forest"
 loadstring(game.HttpGet(game,"https://raw.githubusercontent.com/CorruptedClan/Autofarm/main/sourcecode.lua", true))()
 local Toggle = AutoTab:CreateToggle({
-   Name = "Town",
+   Name = "Forest",
    CurrentValue = false,
    Flag = "Toggle1", 
    Callback = function(Value)
@@ -65,7 +65,7 @@ _G.AutoFarm = false
 _G.Area = "Mine"
 loadstring(game.HttpGet(game,"https://raw.githubusercontent.com/CorruptedClan/Autofarm/main/sourcecode.lua", true))()
 local Toggle = AutoTab:CreateToggle({
-   Name = "Town",
+   Name = "Mine",
    CurrentValue = false,
    Flag = "Toggle1", 
    Callback = function(Value)
