@@ -23,7 +23,7 @@ local SpawnSection = AutoTab:AddSection({
 _G.AutoFarm = false
 _G.Area = "Town"
 loadstring(game.HttpGet(game,"https://raw.githubusercontent.com/zuhnosu/psx-auto-farm/main/main.lua", true))()
-local Toggle = Tab:CreateToggle({
+local Toggle = AutoTab:CreateToggle({
    Name = "Toggle Example",
    Default = false,
    Callback = function(Value)
