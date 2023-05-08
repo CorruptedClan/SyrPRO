@@ -1,30 +1,32 @@
-local Rayfield = loadstring(game:HttpGet("https://sirius.menu/rayfield"))()
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
+-- windows
 
+local Window = OrionLib:MakeWindow({Name = "SyrHub Pro - Pet Sim X", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
-local ZWindow = Rayfield:CreateWindow({
-   Name = "SyrHub PRO - Pet Sim X",
-   LoadingTitle = "Ty for using",
-   LoadingSubtitle = "updates soon",
-   ConfigurationSaving = {
-      Enabled = true,
-      FolderName = nil,
-      FileName = "SyrPRO"
+-- tabs
 
+local AutoTab = Window:MakeTab({
+	Name = "Autofarm",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
 
+-- sections
 
-local AutoTab = ZWindow:CreateTab("Auto Farm", 4483362458) 
-local AutoSection = AutoTab:CreateSection("Spawn")
+local SpawnSection = AutoTab:AddSection({
+	Name = "Spawn"
+})
 
-
+-- buttons
 
 _G.AutoFarm = false
 _G.Area = "Town"
 loadstring(game.HttpGet(game,"https://raw.githubusercontent.com/zuhnosu/psx-auto-farm/main/main.lua", true))()
-local Toggle = AutoTab:CreateToggle({
-   Name = "Town",
+local Toggle = Tab:CreateToggle({
+   Name = "Toggle Example",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "Toggle1",
    Callback = function(Value)
        _G.AutoFarm = Value
    end
