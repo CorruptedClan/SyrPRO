@@ -31,7 +31,7 @@ local AutoTab = Window:CreateTab("Autofarm", 4483362458)
 
 _G.AutoFarm = false
 _G.Area = "Town"
-loadstring(game.HttpGet(game,"https://raw.githubusercontent.com/CorruptedClan/Autofarm/main/source%20code.lua", true))()
+loadstring(game.HttpGet(game,"https://raw.githubusercontent.com/CorruptedClan/Autofarm/main/sourcecode.lua", true))()
 local Toggle = AutoTab:CreateToggle({
    Name = "Town",
    CurrentValue = false,
