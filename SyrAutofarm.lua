@@ -27,7 +27,11 @@ local Window = Rayfield:CreateWindow({
 
 local AutoTab = Window:CreateTab("Autofarm", 4483362458)
 
--- button t1
+-- sections
+
+local Section = AutoTab:CreateSection("Spawn")
+
+-- button s1
 
 _G.AutoFarm = false
 _G.Area = "Town"
