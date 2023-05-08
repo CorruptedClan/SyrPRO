@@ -1,30 +1,43 @@
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
 
--- windows
+-- start
 
-local Window = OrionLib:MakeWindow({Name = "SyrHub Pro - Pet Sim X", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
-
--- tabs
-
-local AutoTab = Window:MakeTab({
-	Name = "Autofarm",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
+local Window = Rayfield:CreateWindow({
+   Name = "Rayfield Example Window",
+   LoadingTitle = "Rayfield Interface Suite",
+   LoadingSubtitle = "by Sirius",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Big Hub"
+   },
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Syr Key System",
+      Subtitle = "get the key from .gg/syrhub",
+      Note = "join discord.gg/syrhub for key",
+      FileName = "SyrHubTop", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"SyrHubOnTop"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
 })
 
--- sections
+-- tab 1
 
-local SpawnSection = AutoTab:AddSection({
-	Name = "Spawn"
-})
+local AutoTab = Window:CreateTab("Autofarm", 4483362458)
 
--- buttons
+-- section 1
+
+local SpawnSection = Tab:CreateSection("Spawm")
+
+-- button s1
 
 _G.AutoFarm = false
 _G.Area = "Town"
 loadstring(game.HttpGet(game,"https://raw.githubusercontent.com/zuhnosu/psx-auto-farm/main/main.lua", true))()
 local Toggle = AutoTab:CreateToggle({
-   Name = "Town",
+   Name = "Toggle Example",
    CurrentValue = false,
    Flag = "Toggle1", 
    Callback = function(Value)
