@@ -1,9 +1,9 @@
-local Rayfield = loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Rayfield/main/source"))()
+local Rayfield = loadstring(game:HttpGet("https://sirius.menu/rayfield"))()
 
 
 
-local Window = Rayfield:CreateWindow({
-   Name = "AutoFarm",
+local ZWindow = Rayfield:CreateWindow({
+   Name = "SyrHub PRO - Pet Sim X",
    LoadingTitle = "Ty for using",
    LoadingSubtitle = "updates soon",
    ConfigurationSaving = {
@@ -13,7 +13,7 @@ local Window = Rayfield:CreateWindow({
 
 
 
-local AutoTab = Window:CreateTab("Auto Farm", 4483362458) 
+local AutoTab = ZWindow:CreateTab("Auto Farm", 4483362458) 
 local AutoSection = AutoTab:CreateSection("Spawn")
 
 
